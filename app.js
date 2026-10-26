@@ -94,7 +94,7 @@ function renderHome() {
     <div class="dashboard-grid">
       ${active ? `<section class="resume-card" aria-label="Сохранённое занятие"><span class="mini-icon">${icon('book')}</span><div class="resume-copy"><h2>Продолжим с вопроса №${session.ids[session.index]}?</h2><p>${modeNames[session.mode]} · выполнено ${sessionAnswered} из ${session.ids.length}</p></div><button class="button small" data-action="resume">Продолжить ${icon('arrow')}</button></section>` : ''}
       <div class="stack">
-        <section class="card hero"><div class="eyebrow">400 вопросов · одна цель</div><h1>Подготовка<br>в своём темпе.</h1><p>Поликлиническая терапия. Проходите вопросы последовательно и возвращайтесь к тому, что требует внимания.</p><div class="order-tag">${icon('check')} В порядке исходного PDF</div></section>
+        <section class="card hero"><div class="eyebrow">400 вопросов · одна цель</div><h1>Я<br>тебя люблю.</h1><p>Поликлиническая терапия для любимой. Проходите вопросы последовательно и возвращайтесь к тому, что требует внимания.</p><div class="order-tag">${icon('check')} В порядке исходного PDF</div></section>
         <section class="card" aria-labelledby="start-heading"><h2 class="section-title" id="start-heading">Начнём занятие</h2><p class="section-intro">Выберите режим и удобный объём на сегодня.</p>
           <div class="mode-tabs" role="group" aria-label="Режим занятия"><button class="mode-tab" aria-pressed="${selectedMode === 'learn'}" data-action="mode" data-mode="learn">${icon('book')} Обучение</button><button class="mode-tab" aria-pressed="${selectedMode === 'exam'}" data-action="mode" data-mode="exam">${icon('exam')} Экзамен</button></div>
           <p class="mode-description" id="mode-description">${selectedMode === 'learn' ? 'Проверяйте себя после каждого вопроса. Верный ответ появится сразу после проверки.' : 'Отвечайте самостоятельно. Оценка и правильные ответы появятся после завершения.'}</p>
@@ -307,7 +307,7 @@ document.addEventListener('click', async event => {
         navigate('session');
       }
     } else if (action === 'settings') openSettings();
-    else if (action === 'about') openModal('О тренажёре', '<p>400 тестовых заданий по поликлинической терапии. Вопросы, варианты и эталонные ответы перенесены из предоставленного PDF <b>not_marked.pdf</b>.</p><p>Порядок вопросов и вариантов сохранён. В заданиях с комбинациями выбирается один готовый вариант. Вопрос №96 взят из версии not_marked.pdf.</p><p>Обучение показывает ответ после проверки. Экзамен — после завершения. Правильный ответ при повторении убирает вопрос из списка ошибок.</p><p class="small-copy">На iPhone и iPad страницу можно добавить на экран «Домой» через меню «Поделиться» в Safari.</p>');
+    else if (action === 'about') openModal('О тренажёре', '<p>400 тестовых заданий по поликлинической терапии. Вопросы, варианты и эталонные ответы перенесены из предоставленного PDF.</p><p>Порядок вопросов и вариантов сохранён. В заданиях с комбинациями выбирается один готовый вариант. </p><p>Обучение показывает ответ после проверки. Экзамен — после завершения. Правильный ответ при повторении убирает вопрос из списка ошибок.</p><p class="small-copy">На iPhone и iPad страницу можно добавить на экран «Домой» через меню «Поделиться» в Safari.</p>');
     else if (action === 'close-modal') closeModal();
     else if (action === 'confirm-modal') closeModal(true);
     else if (action === 'export') exportProgress();
