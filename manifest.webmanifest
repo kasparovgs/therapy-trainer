@@ -1,0 +1,11 @@
+{
+  "name": "Практика — поликлиническая терапия",
+  "short_name": "Практика",
+  "lang": "ru",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f9f6",
+  "theme_color": "#176c5b",
+  "icons": [{ "src": "./assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }, { "src": "./assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" }]
+}

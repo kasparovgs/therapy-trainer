@@ -1,0 +1,11 @@
+{
+  "name": "therapy-trainer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/engine.test.js",
+    "start": "python3 scripts/serve.py",
+    "test:browser": "node tests/browser.mjs"
+  }
+}
